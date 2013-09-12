@@ -29,7 +29,7 @@ RDEPEND=">=x11-libs/libxcb-1.9
 	sres? ( =x11-apps/sres-9999 )
 	txtw? ( =x11-misc/txtw-9999 )
 	dzen? ( x11-misc/dzen )
-	bar? ( sys-apps/bar )"
+	bar? ( =x11-apps/bar-9999 )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
