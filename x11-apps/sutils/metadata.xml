@@ -2,8 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer>
-	  <email>milomouse@github.com</name>
-	  <name>Vincent ZaGara II</name>
+	  <email>dmitry@kokorin.org</email>
+	  <name>Dmitry Kokorin</name>
 	</maintainer>
 	<use>
 	</use>
