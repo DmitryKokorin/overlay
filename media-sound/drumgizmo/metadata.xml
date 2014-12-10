@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<maintainer>
+	<email>dmitry@kokorin.org</email>
+    <name>Dmitry Kokorin</name>
+</maintainer>
+<longdescription></longdescription>
+<use>
+	<flag name="cli">Enable command line interface</flag>
+	<flag name="debug">Enable extra debug codepaths, like asserts and extra output. If you want to get meaningful backtraces see http://www.gentoo.org/proj/en/qa/backtraces.xml</flag>
+	<flag name="lv2">Add support for Ladspa V2</flag>
+	<flag name="sse">Use the SSE instruction set</flag>
+	<flag name="sse2">Use the SSE2 instruction set</flag>
+	<flag name="sse3">Use the SSE3 instruction set</flag>
+	<flag name="zita">Enable zita resampler</flag>
+</use>
+</pkgmetadata>
