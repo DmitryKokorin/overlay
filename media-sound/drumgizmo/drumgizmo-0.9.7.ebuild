@@ -36,9 +36,9 @@ src_configure() {
 		myconf="${myconf} --enable-resampler=zita"
 	fi
 
-	econf $(use_enable gui x11) \
-		  $(use_enable lv2) \
-		  $(use_enable cli) \
+	econf $(use_enable gui gui x11) \
+	  $(use_enable lv2) \
+	  $(use_enable cli) \
           $(use_with debug) \
           $(use_enable sse sse 1) \
           $(use_enable sse2 sse 2) \
