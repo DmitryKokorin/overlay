@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/youtube-dl/youtube-dl-2013.11.07.ebuild,v 1.1 2013/11/07 16:18:23 jer Exp $
+# $Header: $
 
 EAPI=5
 
@@ -19,22 +19,21 @@ KEYWORDS="~amd64"
 IUSE="test"
 
 RDEPEND="
-    dev-python/beautifulsoup:4
-    dev-python/html5lib
-    test? ( dev-python/nose[${PYTHON_USEDEP}] )
-    dev-python/requests
-    dev-python/six
+	dev-python/beautifulsoup:4
+	dev-python/html5lib
+	dev-python/requests
+	dev-python/six
 "
 
 DEPEND="
-    ${RDEPEND}
+	${RDEPEND}
+	test? ( dev-python/nose[${PYTHON_USEDEP}] )
 	dev-python/setuptools[${PYTHON_USEDEP}]
 "
 
 RESTRICT="test"
 
 S="${WORKDIR}/${PN}"
-
 
 src_install() {
 	python_domodule coursera
@@ -43,6 +42,5 @@ src_install() {
 }
 
 python_test() {
-        nosetests || die "Tests fail with ${EPYTHON}"
+	nosetests || die "Tests fail with ${EPYTHON}"
 }
-
