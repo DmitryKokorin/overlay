@@ -29,7 +29,7 @@ RDEPEND="${CDEPEND}
 	sys-apps/openrc
 	virtual/logger"
 
-DOCS=( README.rst ChangLog scripts/sshguard_backendgen.sh )
+DOCS=( README.rst ChangeLog scripts/sshguard_backendgen.sh )
 
 src_configure() {
 	# Needed for usleep(3), see "nasty" in src/sshguard_logsuck.c
