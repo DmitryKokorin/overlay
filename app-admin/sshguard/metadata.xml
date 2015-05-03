@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <maintainer>
+    <email>dmitry@kokorin.org</email>
+    <name>Dmitry Kokorin</name>
+  </maintainer>
+  <use>
+    <flag name="ipfilter">Enable ipfilter firewall support (only for *bsd)</flag>
+  </use>
+</pkgmetadata>
