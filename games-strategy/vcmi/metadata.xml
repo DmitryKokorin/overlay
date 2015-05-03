@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<maintainer>
+	<email>dmitry@kokorin.org</email>
+	<name>Dmitry Kokorin</name>
+</maintainer>
+<longdescription></longdescription>
+<use>
+	<flag name="sdl2">Link against libsdl2 instead of libsdl</flag>
+</use>
+</pkgmetadata>
