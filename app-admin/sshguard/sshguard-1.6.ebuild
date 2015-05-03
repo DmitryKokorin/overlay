@@ -12,7 +12,7 @@ inherit git-r3
 
 DESCRIPTION="protects hosts from brute force attacks against ssh"
 HOMEPAGE="http://sshguard.sourceforge.net/ https://bitbucket.org/sshguard/sshguard"
-SRC_URI="https://www.bitbucket.org/${PN}/${PN}/downloads/${P}.tar.bz2"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
