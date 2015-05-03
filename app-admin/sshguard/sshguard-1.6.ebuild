@@ -5,6 +5,10 @@
 EAPI=5
 inherit eutils flag-o-matic
 
+if [[ ${PV} = 9999* ]]; then
+	LIVE="true"
+fi
+
 #if LIVE
 EGIT_REPO_URI="http://bitbucket.org/${PN}/${PN}.git"
 inherit git-r3
