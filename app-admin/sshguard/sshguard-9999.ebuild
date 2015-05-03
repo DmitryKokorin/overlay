@@ -54,7 +54,7 @@ src_configure() {
 
 src_install() {
 	default
-	dodoc examples/*
+	dodoc -r examples/
 	newinitd "${FILESDIR}"/${PN}.initd ${PN}
 	newconfd "${FILESDIR}"/${PN}.confd ${PN}
 }
