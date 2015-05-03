@@ -6,27 +6,20 @@ EAPI=5
 inherit eutils flag-o-matic
 
 if [[ ${PV} = 9999* ]]; then
-	LIVE="true"
+	KEYWORDS=""
+	EGIT_REPO_URI="http://bitbucket.org/${PN}/${PN}.git"
+	inherit git-r3
+else
+	KEYWORDS="~amd64 ~x86"
+	SRC_URI="mirror://sourceforge/${PN}/${PV}/${P}.tar.gz"
 fi
-
-#if LIVE
-EGIT_REPO_URI="http://bitbucket.org/${PN}/${PN}.git"
-inherit git-r3
-#endif
 
 DESCRIPTION="protects hosts from brute force attacks against ssh"
 HOMEPAGE="http://sshguard.sourceforge.net/ https://bitbucket.org/sshguard/sshguard"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
 IUSE="ipfilter kernel_FreeBSD kernel_linux"
-
-#if LIVE
-KEYWORDS=
-SRC_URI=
-#endif
 
 CDEPEND="kernel_linux? ( net-firewall/iptables )
 	kernel_FreeBSD? ( !ipfilter? ( sys-freebsd/freebsd-pf ) )"

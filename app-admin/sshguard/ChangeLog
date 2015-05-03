@@ -4,7 +4,7 @@
 
 *sshguard-1.6 (03 May 2015)
 
-  03 May 2015; Dmitry Kokorin <dmitry@kokorin.org> +sshguard-1.6.ebuild,
+  03 May 2015; Dmitry Kokorin <dmitry@kokorin.org> +sshguard-1.6.0.ebuild,
   +sshguard-9999.ebuild:
   Upstream moved to bitbucket.
   -sshguard-1.5-r1.ebuild, -sshhguard-1.5-r2.ebuild, -sshguard-1.5-r3.ebuild,
