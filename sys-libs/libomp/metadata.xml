@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<maintainer>
+	<email>dmitry@kokorin.org</email>
+    <name>Dmitry Kokorin</name>
+</maintainer>
+<longdescription>An OpenMP runtime library for use with the LLVM project's clang compiler</longdescription>
+</pkgmetadata>
