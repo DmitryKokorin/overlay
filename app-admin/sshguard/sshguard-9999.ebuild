@@ -11,7 +11,7 @@ if [[ ${PV} = 9999* ]]; then
 	inherit git-r3
 else
 	KEYWORDS="~amd64 ~x86"
-	SRC_URI="mirror://sourceforge/${PN}/${PV}/${P}.tar.gz"
+	SRC_URI="mirror://sourceforge/${PN}/${PV}/${P}.tar.xz"
 fi
 
 DESCRIPTION="protects hosts from brute force attacks against ssh"
