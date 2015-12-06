@@ -18,7 +18,6 @@ HOMEPAGE=" http://www.zamaudio.com/?p=976"
 
 LICENSE="GPL-2+"
 SLOT="0"
-KEYWORDS="~amd64"
 IUSE=""
 
 RDEPEND="x11-libs/libX11
