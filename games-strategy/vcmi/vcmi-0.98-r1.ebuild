@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: $
+# $Id$
 
 EAPI=4
 
@@ -9,29 +9,18 @@ inherit eutils games git-r3 cmake-utils
 DESCRIPTION="Heroes of Might and Magic III game engine rewrite"
 HOMEPAGE="http://forum.vcmi.eu/index.php"
 EGIT_REPO_URI="https://github.com/${PN}/${PN}.git"
-EGIT_COMMIT="${PV}"
+
+if [[ ${PV} = 9999* ]]; then
+	KEYWORDS=""
+else
+	EGIT_COMMIT=${PV}
+	KEYWORDS="~amd64"
+fi
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64"
 IUSE="debug sdl2"
 
-DEPEND=">dev-libs/boost-1.44.0
-		!sdl2? (
-			media-libs/libsdl[video]
-			media-libs/sdl-mixer
-			media-libs/sdl-image
-			media-libs/sdl-ttf
-		)
-		sdl2? (
-			media-libs/libsdl2[video]
-			media-libs/sdl2-mixer
-			media-libs/sdl2-image
-			media-libs/sdl2-ttf
-		)
-		sys-libs/zlib
-		virtual/ffmpeg
-		virtual/pkgconfig"
 RDEPEND="!sdl2? (
 			media-libs/libsdl[video]
 			media-libs/sdl-mixer
@@ -45,6 +34,10 @@ RDEPEND="!sdl2? (
 			media-libs/sdl2-ttf
 		)
 		virtual/ffmpeg"
+DEPEND="${RDEPEND}
+		>dev-libs/boost-1.44.0
+		sys-libs/zlib
+		virtual/pkgconfig"
 
 src_configure() {
 	local MY_DATADIR="${GAMES_DATADIR#/usr/}/${PN}"
