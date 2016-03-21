@@ -6,7 +6,5 @@
 	<name>Dmitry Kokorin</name>
 </maintainer>
 <longdescription></longdescription>
-<use>
-	<flag name="sdl2">Link against libsdl2 instead of libsdl</flag>
-</use>
+<use></use>
 </pkgmetadata>

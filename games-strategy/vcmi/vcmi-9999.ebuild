@@ -4,36 +4,29 @@
 
 EAPI=4
 
-inherit eutils games git-r3 cmake-utils
+inherit eutils games cmake-utils
 
 DESCRIPTION="Heroes of Might and Magic III game engine rewrite"
 HOMEPAGE="http://forum.vcmi.eu/index.php"
-EGIT_REPO_URI="https://github.com/${PN}/${PN}.git"
 
 if [[ ${PV} = 9999* ]]; then
+	inherit git-r3
+	EGIT_REPO_URI="https://github.com/${PN}/${PN}.git"
 	KEYWORDS=""
 else
-	EGIT_COMMIT=${PV}
+	SRC_URI="https://github.com/${PN}/${PN}/archive/${PV}.tar.gz"
 	KEYWORDS="~amd64"
 fi
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="debug sdl2"
+IUSE="debug"
 
-RDEPEND="!sdl2? (
-			media-libs/libsdl[video]
-			media-libs/sdl-mixer
-			media-libs/sdl-image
-			media-libs/sdl-ttf
-		)
-		sdl2? (
-			media-libs/libsdl2[video]
-			media-libs/sdl2-mixer
-			media-libs/sdl2-image
-			media-libs/sdl2-ttf
-		)
-		virtual/ffmpeg"
+RDEPEND="media-libs/libsdl2[video]
+		 media-libs/sdl2-mixer
+		 media-libs/sdl2-image
+		 media-libs/sdl2-ttf
+		 virtual/ffmpeg"
 DEPEND="${RDEPEND}
 		>dev-libs/boost-1.44.0
 		sys-libs/zlib
@@ -44,11 +37,7 @@ src_configure() {
 	local MY_GAMESLIBDIR=$(games_get_libdir)
 	local MY_LIBDIR=${MY_GAMESLIBDIR#/usr/}
 	local MY_BINDIR=${GAMES_BINDIR#/usr/}
-	local MY_ENABLE_SDL2=OFF
-	if use sdl2; then
-		local MY_ENABLE_SDL2=ON
-	fi
-	local mycmakeargs=( -DDATA_DIR="${MY_DATADIR}" -DLIB_DIR="${MY_LIBDIR}"	-DBIN_DIR="${MY_BINDIR}" -DENABLE_SDL2="${MY_ENABLE_SDL2}" )
+	local mycmakeargs=( -DDATA_DIR="${MY_DATADIR}" -DLIB_DIR="${MY_LIBDIR}"	-DBIN_DIR="${MY_BINDIR}" )
 
 	cmake-utils_src_configure
 }
