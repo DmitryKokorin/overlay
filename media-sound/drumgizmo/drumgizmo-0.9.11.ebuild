@@ -1,4 +1,4 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.drumgizmo.org/releases/${P}/${P}.tar.gz"
 LICENSE="GPL-3"
 SLOT=0
 KEYWORDS="~amd64"
-IUSE="+gui cli debug +lv2 sse sse2 sse3 +libsamplerate zita"
+IUSE="+gui cli debug +lv2 cpu_flags_x86_sse cpu_flags_x86_sse2 cpu_flags_x86_sse3 +libsamplerate zita"
 REQUIRED_USE="^^ ( libsamplerate zita )"
 
 RDEPEND="lv2? ( media-libs/lv2 )
@@ -40,8 +40,8 @@ src_configure() {
 		$(use_enable lv2) \
 		$(use_enable cli) \
 		$(use_with debug) \
-		$(use_enable sse sse 1) \
-		$(use_enable sse2 sse 2) \
-		$(use_enable sse3 sse 3) \
+		$(use_enable cpu_flags_x86_sse sse 1) \
+		$(use_enable cpu_flags_x86_sse2 sse 2) \
+		$(use_enable cpu_flags_x86_sse3 sse 3) \
 		${myconf}
 }
