@@ -15,7 +15,7 @@ EGIT_REPO_URI="http://git.ardour.org/ardour/ardour.git"
 
 if [[ ${PV} != *9999* ]]; then
 	KEYWORDS="~amd64 ~x86"
-	EGIT_COMMIT="${V}"
+	EGIT_COMMIT="${PV}"
 fi
 
 LICENSE="GPL-2"
