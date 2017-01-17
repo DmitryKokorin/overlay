@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>dmitry@kokorin.org</email>
+		<name>Dmitry Kokorin</name>
+	</maintainer>
+	<longdescription>
+	avldrums.lv2 is a simple Drum Sample Player Plugin, dedicated to the http://www.bandshed.net/avldrumkits/
+	</longdescription>
+</pkgmetadata>
