@@ -1,0 +1,12 @@
+diff -ruN helm-0.9.0.orig/JUCE/modules/juce_audio_formats/codecs/flac/libFLAC/lpc_flac.c helm-0.9.0/JUCE/modules/juce_audio_formats/codecs/flac/libFLAC/lpc_flac.c
+--- helm-0.9.0.orig/JUCE/modules/juce_audio_formats/codecs/flac/libFLAC/lpc_flac.c	2017-08-06 12:35:49.291181388 +0300
++++ helm-0.9.0/JUCE/modules/juce_audio_formats/codecs/flac/libFLAC/lpc_flac.c	2017-08-06 12:38:57.374597876 +0300
+@@ -50,6 +50,8 @@
+ 
+ #ifndef FLAC__INTEGER_ONLY_LIBRARY
+ 
++#define HAVE_LROUND 1
++
+ #if !defined(HAVE_LROUND)
+ #if defined(_MSC_VER)
+ #include <float.h>
