@@ -11,6 +11,7 @@
 	<flag name="gui">Enable x11 gui interface</flag>
 	<flag name="debug">Enable extra debug codepaths, like asserts and extra output. If you want to get meaningful backtraces see http://www.gentoo.org/proj/en/qa/backtraces.xml</flag>
 	<flag name="lv2">Add support for Ladspa V2</flag>
+	<flag name="vst">Add support for VST</flag>
 	<flag name="zita">Enable zita resampler</flag>
 </use>
 </pkgmetadata>

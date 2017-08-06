@@ -1,0 +1,12 @@
+diff -ruN drumgizmo-0.9.14.orig/plugin/Makefile.in drumgizmo-0.9.14/plugin/Makefile.in
+--- drumgizmo-0.9.14.orig/plugin/Makefile.in	2017-08-06 02:51:39.790290203 +0300
++++ drumgizmo-0.9.14/plugin/Makefile.in	2017-08-06 02:49:34.636538505 +0300
+@@ -1052,8 +1052,6 @@
+ 
+ 
+ install-data-hook:
+-	rm -f $(lv2plugindir)/drumgizmo.la
+-	rm -f $(vstplugindir)/drumgizmo_vst.la
+ 
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
