@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<name>Dmitry Kokorin</name>
+		<email>dmitry@kokorin.org</email>
+	</maintainer>
+	<use>
+		<flag name="snappy">use the snappy compression format from <pkg>app-arch/snappy</pkg></flag>
+	</use>
+</pkgmetadata>
