@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer type="person">
-	  <email>dmitry@kokorin.org</email>
-	  <name>Dmitry Kokorin</name>
+		<email>dmitry@kokorin.org</email>
+		<name>Dmitry Kokorin</name>
 	</maintainer>
 </pkgmetadata>
