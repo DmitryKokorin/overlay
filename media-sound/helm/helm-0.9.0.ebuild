@@ -1,7 +1,7 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=5
+EAPI=6
 inherit eutils
 
 DESCRIPTION="Open source polyphonic software synthesizer with lots of modulation"
@@ -23,15 +23,10 @@ DEPEND="${RDEPEND}"
 
 DOCS="README.md"
 
-src_unpack() {
-	unpack ${A}
-    cd "${S}"
-    epatch "${FILESDIR}/lround.patch"
-}
-
 src_prepare() {
+	epatch "${FILESDIR}/lround.patch"
 	sed -e 's|/usr/lib/|/usr/'$(get_libdir)'/|' -i Makefile || die
-	epatch_user
+	eapply_user
 }
 
 src_compile() {
